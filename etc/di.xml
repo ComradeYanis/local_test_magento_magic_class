@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Code\Generator">
+        <arguments>
+            <argument name="generatedEntities" xsi:type="array">
+                <item name="magic" xsi:type="string">\Elogic\MagentoFramework\ObjectManager\Code\Generator\Magic</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="magic_test" xsi:type="object">
+                    Elogic\MagentoFramework\Console\Command\MagicText
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
